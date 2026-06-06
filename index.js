@@ -342,4 +342,5 @@ async function showOpenRequests(phone, session) {
   await sendMessage(phone, msg);
 }
 
-app.listen(3000, () => console.log("Fetcha WhatsApp bot running on port 3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Fetcha WhatsApp bot running on port ${PORT}`));
